@@ -33,6 +33,16 @@ body {
   margin: $bodyMarginTop $bodyMarginRight $bodyMarginBottom $bodyMarginLeft;
   border: 5px solid red;
 }
+
+.pageContainer {
+  width: 100% ;
+}
+.boxContainer {
+  width:100% ;
+}
+
+
+
 .box {
   width: 100%;
   background-color: $primaryBackgroundColor;
