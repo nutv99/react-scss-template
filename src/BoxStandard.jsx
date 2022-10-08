@@ -18,7 +18,7 @@ const count = 0;
  //***********************   Start Declare Function  **********************   
 const getDataAPI = async () => {
 try {
-     setLoading(true);
+      setLoading(true);
       let endPoint = 'dataservice/clsItemMaster.php';
       const usersData = await ApiService.axiosGet(endPoint);
       setItem2s(usersData);

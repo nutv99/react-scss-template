@@ -1,12 +1,38 @@
 import React from 'react';
 import { LoremIpsum, Avatar } from 'react-lorem-ipsum';
+import { BoxStandard } from './BoxStandard';
+
+/*
+Standard Box Data Structure
+BoxStandard : {
+  boxid : string,
+  topcaption:[string],
+  subject: string ,
+  img : string ,
+  desc : string 
+  Link : [string],
+  btnFunction : [string]
+}
+
+BoxStandardExtend : {
+  boxid : string,
+  subject: string ,
+  img : string ,
+  subimg :[string],
+  desc : string ,
+  subdesc:[string],
+  Link : [string],
+  btnFunction : [string]
+}
 
 
+*/
 export default function App() {
   return (
     <div>
       <h1>ssss</h1>
       <div className="box">5555</div>
+      
       <div className="box">66665555</div>
       <div className="flexRow">
         <div className="card boxShadow">Card1</div>
