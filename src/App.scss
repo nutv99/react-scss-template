@@ -84,6 +84,13 @@ body {
   color: lighten($primaryColor, 30);
   font-size: 14px;
 }
+.cardImage .descBox {
+  color: lighten($primaryColor, 30);
+  font-size: 14px;
+  max-height: 100px;
+  height: 100px;
+  overflow: hidden;
+}
 
 .boxShadow {
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
