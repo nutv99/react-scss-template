@@ -1,4 +1,8 @@
 $myColor: red;
+
+$color: #80d144;
+$primaryColor: #000f89;
+
 $mainBackgroundColor: lightblue;
 $primaryBackgroundColor: white;
 $secondBackgroundColor: lightgray;
@@ -72,6 +76,14 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 }
+.cardImage .headcaption {
+  color: $primaryColor;
+  font-size: 18px;
+}
+.cardImage .subcaption {
+  color: lighten($primaryColor, 30);
+  font-size: 14px;
+}
 
 .boxShadow {
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
@@ -79,4 +91,71 @@ body {
 
 h1 {
   color: $myColor;
+}
+
+// Tint color .box
+$color: #80d144;
+$tiles: 10;
+
+@function tint($color, $percentage) {
+  @return mix(#fff, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(#000, $color, $percentage);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  font: bold 2rem/1.5 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0 0 0 20px;
+  padding: 60px 0 0;
+}
+
+.color-list {
+  float: left;
+  display: block;
+  width: 100%;
+}
+
+.tile {
+  width: 70px;
+  height: 70px;
+  border: 1px solid transparentize(#ddd, 0.15);
+  border-radius: 3px;
+  box-shadow: 0 0 0 5px #fff inset;
+  float: left;
+  margin: 0 0 20px 20px;
+  background-color: $color;
+  &--tint {
+    @for $i from 1 through $tiles {
+      &:nth-child(#{$i}) {
+        background: tint($color, 10 * $i);
+      }
+    }
+  }
+  &--lighten {
+    @for $i from 1 through $tiles {
+      &:nth-child(#{$i}) {
+        background: lighten($color, 10 * $i);
+      }
+    }
+  }
+  &--shade {
+    @for $i from 1 through $tiles {
+      &:nth-child(#{$i}) {
+        background: shade($color, 10 * $i);
+      }
+    }
+  }
+  &--darken {
+    @for $i from 1 through $tiles {
+      &:nth-child(#{$i}) {
+        background: darken($color, 10 * $i);
+      }
+    }
+  }
 }

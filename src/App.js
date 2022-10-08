@@ -15,10 +15,66 @@ export default function App() {
             alt=""
           />
           <div>
-            <h2 style={{ margin: 0 }}>Product </h2>
+            <h2 className='headcaption' style={{ margin: 0 }}>Product </h2>
+            <h4 className='subcaption' style={{ margin: 0 }}>Product </h4>
           </div>
         </div>
       </div>
+
+      <ul className="color-list">
+  <li className="tile tile--tint"></li>
+  <li className="tile tile--tint"></li>
+  <li className="tile tile--tint"></li>
+  <li className="tile tile--tint"></li>
+  <li className="tile tile--tint"></li>
+  <li className="tile tile--tint"></li>
+  <li className="tile tile--tint"></li>
+  <li className="tile tile--tint"></li>
+  <li className="tile tile--tint"></li>
+  <li className="tile tile--tint"></li>
+</ul>
+
+<h2 className="title">Lighten</h2>
+<ul className="color-list">
+  <li className="tile tile--lighten"></li>
+  <li className="tile tile--lighten"></li>
+  <li className="tile tile--lighten"></li>
+  <li className="tile tile--lighten"></li>
+  <li className="tile tile--lighten"></li>
+  <li className="tile tile--lighten"></li>
+  <li className="tile tile--lighten"></li>
+  <li className="tile tile--lighten"></li>
+  <li className="tile tile--lighten"></li>
+  <li className="tile tile--lighten"></li>
+</ul>
+
+<h2 className="title">Shade</h2>
+<ul className="color-list">
+  <li className="tile tile--shade"></li>
+  <li className="tile tile--shade"></li>
+  <li className="tile tile--shade"></li>
+  <li className="tile tile--shade"></li>
+  <li className="tile tile--shade"></li>
+  <li className="tile tile--shade"></li>
+  <li className="tile tile--shade"></li>
+  <li className="tile tile--shade"></li>
+  <li className="tile tile--shade"></li>
+  <li className="tile tile--shade"></li>
+</ul>
+
+<h2 className="title">Darken</h2>
+<ul className="color-list">
+  <li className="tile tile--darken"></li>
+  <li className="tile tile--darken"></li>
+  <li className="tile tile--darken"></li>
+  <li className="tile tile--darken"></li>
+  <li className="tile tile--darken"></li>
+  <li className="tile tile--darken"></li>
+  <li className="tile tile--darken"></li>
+  <li className="tile tile--darken"></li>
+  <li className="tile tile--darken"></li>
+  <li className="tile tile--darken"></li>
+</ul>
     </div>
   );
 }
