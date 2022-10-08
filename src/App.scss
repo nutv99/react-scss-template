@@ -1,0 +1,82 @@
+$myColor: red;
+$mainBackgroundColor: lightblue;
+$primaryBackgroundColor: white;
+$secondBackgroundColor: lightgray;
+$ThirdBackgroundColor: lightgray;
+$FouthBackgroundColor: lightgray;
+
+$bodyPaddingTop: 10px;
+$bodyPaddingLeft: 10px;
+$bodyPaddingRight: 10px;
+$bodyPaddingBottom: 10px;
+
+$bodyMarginTop: 0px;
+$bodyMarginLeft: 0px;
+$bodyMarginRight: 0px;
+$bodyMarginBottom: 0px;
+$boxMargin: 10px;
+
+$borderRadiusFull: 6px;
+$borderRadiusHalf: 6px 6px 0px 0px;
+
+$cardSmallHeight: 100px;
+$cardMiddleHeight: 250px;
+$cardBigHeight: 400px;
+
+body {
+  background-color: $primaryBackgroundColor;
+  padding: $bodyPaddingTop $bodyPaddingRight $bodyPaddingBottom $bodyPaddingLeft;
+  margin: $bodyMarginTop $bodyMarginRight $bodyMarginBottom $bodyMarginLeft;
+  border: 5px solid red;
+}
+.box {
+  width: 100%;
+  background-color: $primaryBackgroundColor;
+  margin-top: $boxMargin;
+}
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow-x: scroll;
+}
+.card {
+  width: 20%;
+  background-color: $primaryBackgroundColor;
+  min-height: 100px;
+  margin-top: $boxMargin;
+  margin-bottom: $boxMargin;
+  border: 1px solid lightgray;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: $borderRadiusHalf;
+}
+
+.cardImage {
+  width: 20%;
+  height: $cardMiddleHeight;
+  background-color: $primaryBackgroundColor;
+  min-height: 100px;
+  margin-top: $boxMargin;
+  margin-bottom: $boxMargin;
+  border: 1px solid lightgray;
+  margin-right: 10px;
+  border-radius: $borderRadiusHalf;
+}
+.cardImage img {
+  width: 100%;
+  height: 35%;
+}
+.cardImage div {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.boxShadow {
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+}
+
+h1 {
+  color: $myColor;
+}
