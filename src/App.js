@@ -28,6 +28,7 @@ BoxStandardExtend : {
 
 */
 
+
 function BoxStandard(BoxData) {
   return (
     <div className="boxContainer styleBoxNormal">
@@ -46,6 +47,7 @@ function BoxStandard(BoxData) {
   );
 }
 
+
 export default function App() {
   const BoxData = {
     boxid: 'a111',
@@ -55,7 +57,9 @@ export default function App() {
 
     img: 'https://lovetoshopmall.com/workshop/suha/img/product/3.png',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, eum? Id, culpa? At officia quisquam laudantium nisi mollitia nesciunt, qui porro asperiores cum voluptates placeat similique recusandae in facere quos vitae? 100% Good Reviews',
+    subDesc : '฿4,350|฿3,350|ราคาพิเศษ',
     aLink: '',
+
     btnFunction: 'AddOrder',
   };
   return (
