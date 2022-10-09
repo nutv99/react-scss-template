@@ -36,6 +36,17 @@ body {
   // border: 5px solid red;
 }
 
+/* hide scrollbar but allow scrolling */
+div {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+div::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
 .pageContainer {
   width: 100%;
 }
@@ -51,9 +62,8 @@ body {
 }
 .boxContainer .Subsubject {
   width: 100%;
-  font-size:smaller;
+  font-size: smaller;
   color: #c4c4c4;
-  
 }
 .boxContainer .boxImg {
   display: flex;
@@ -83,9 +93,17 @@ body {
 .flexRow {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+
+  justify-content: space-around;
   overflow-x: scroll;
+
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+
+  padding: $boxPadding;
 }
+
 .card {
   width: 20%;
   background-color: $primaryBackgroundColor;

@@ -29,6 +29,7 @@ BoxStandardExtend : {
 */
 
 function BoxStandard(BoxData) {
+  
   var subdesc = BoxData.subDesc.split('|');
   var btnFnc = BoxData.btnFunction.split('|');
   return (
@@ -60,6 +61,7 @@ function BoxStandard(BoxData) {
     </div>
   );
 }
+
 
 function AddOrder() {
   alert('1');
