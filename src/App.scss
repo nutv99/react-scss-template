@@ -18,7 +18,9 @@ $bodyMarginTop: 0px;
 $bodyMarginLeft: 0px;
 $bodyMarginRight: 0px;
 $bodyMarginBottom: 0px;
+
 $boxMargin: 10px;
+$boxPadding: 5px;
 
 $borderRadiusFull: 6px;
 $borderRadiusHalf: 6px 6px 0px 0px;
@@ -39,10 +41,38 @@ body {
 }
 .boxContainer {
   width: 100%;
+  padding: $boxPadding;
 }
-.boxContainer .caption {
+
+.boxContainer .subject {
+  width: 100%;
   font-size: 22px;
+  color: black;
+}
+.boxContainer .Subsubject {
+  width: 100%;
+  font-size:smaller;
+  color: #c4c4c4;
+  
+}
+.boxContainer .boxImg {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.boxContainer .boxDesc {
+  width: 100%;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+
+.boxContainer .caption {
+  font-size: 16px;
   color: $primaryColor;
+}
+
+.styleBoxNormal {
+  border: 1px solid lightgrey;
 }
 
 .box {

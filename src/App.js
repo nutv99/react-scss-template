@@ -28,13 +28,40 @@ BoxStandardExtend : {
 
 */
 
+function BoxStandard(BoxData) {
+  return (
+    <div className="boxContainer styleBoxNormal">
+      <div className="subject">{BoxData.subject}</div>
+      {/* <div className="Subsubject">{BoxData.subsubject}</div> */}
+      {BoxData.subsubject ? (
+        <div className="Subsubject">{BoxData.subsubject}</div>
+      ) : (
+        ''
+      )}
+      <div className="boxImg">
+        <img src={BoxData.img} alt={BoxData.subject} />
+      </div>
+      <div className="boxDesc">{BoxData.desc}</div>
+    </div>
+  );
+}
+
 export default function App() {
+  const BoxData = {
+    boxid: 'a111',
+    topcaption: '',
+    subject: 'Flower Ceramic Pots',
+    subsubject: 'Best Seller Of Week',
+
+    img: 'https://lovetoshopmall.com/workshop/suha/img/product/3.png',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, eum? Id, culpa? At officia quisquam laudantium nisi mollitia nesciunt, qui porro asperiores cum voluptates placeat similique recusandae in facere quos vitae? 100% Good Reviews',
+    aLink: '',
+    btnFunction: 'AddOrder',
+  };
   return (
     <div>
-      <h1>ssss</h1>
-      <div className="box">5555</div>
-      
-      <div className="box">66665555</div>
+      {BoxStandard(BoxData)}
+
       <div className="flexRow">
         <div className="card boxShadow">Card1</div>
         <div className="card boxShadow">Card2</div>
