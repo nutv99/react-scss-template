@@ -48,9 +48,21 @@ function BoxStandard(BoxData) {
         <div className="boxDesc">{subdesc[1]}</div>
         <div className="boxDesc">{subdesc[2]}</div>
       </div>
-      {btnFnc ? <button>{btnFnc[0]}</button> : ''}
+      {btnFnc ? (
+        <div className="flexRow">
+          {btnFnc.map((btnCaption) => {
+            return <button>{btnCaption}</button>;
+          })}
+        </div>
+      ) : (
+        ''
+      )}
     </div>
   );
+}
+
+function AddOrder() {
+  alert('1');
 }
 
 export default function App() {
@@ -65,7 +77,7 @@ export default function App() {
     subDesc: '฿4,350|฿3,350|ราคาพิเศษ',
     aLink: '',
 
-    btnFunction: 'AddOrder',
+    btnFunction: 'AddOrder|AddBasket',
   };
   return (
     <div>
