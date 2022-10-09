@@ -28,12 +28,11 @@ BoxStandardExtend : {
 
 */
 
-
 function BoxStandard(BoxData) {
+  var subdesc = BoxData.subDesc.split('|');
   return (
     <div className="boxContainer styleBoxNormal">
       <div className="subject">{BoxData.subject}</div>
-      {/* <div className="Subsubject">{BoxData.subsubject}</div> */}
       {BoxData.subsubject ? (
         <div className="Subsubject">{BoxData.subsubject}</div>
       ) : (
@@ -43,10 +42,14 @@ function BoxStandard(BoxData) {
         <img src={BoxData.img} alt={BoxData.subject} />
       </div>
       <div className="boxDesc">{BoxData.desc}</div>
+      <div className="flexRow">
+        <div className="boxDesc">{subdesc[0]}</div>
+        <div className="boxDesc">{subdesc[1]}</div>
+        <div className="boxDesc">{subdesc[2]}</div>
+      </div>
     </div>
   );
 }
-
 
 export default function App() {
   const BoxData = {
@@ -57,7 +60,7 @@ export default function App() {
 
     img: 'https://lovetoshopmall.com/workshop/suha/img/product/3.png',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, eum? Id, culpa? At officia quisquam laudantium nisi mollitia nesciunt, qui porro asperiores cum voluptates placeat similique recusandae in facere quos vitae? 100% Good Reviews',
-    subDesc : '฿4,350|฿3,350|ราคาพิเศษ',
+    subDesc: '฿4,350|฿3,350|ราคาพิเศษ',
     aLink: '',
 
     btnFunction: 'AddOrder',
