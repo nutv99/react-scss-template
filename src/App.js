@@ -30,6 +30,7 @@ BoxStandardExtend : {
 
 function BoxStandard(BoxData) {
   var subdesc = BoxData.subDesc.split('|');
+  var btnFnc = BoxData.btnFunction.split('|');
   return (
     <div className="boxContainer styleBoxNormal">
       <div className="subject">{BoxData.subject}</div>
@@ -47,6 +48,7 @@ function BoxStandard(BoxData) {
         <div className="boxDesc">{subdesc[1]}</div>
         <div className="boxDesc">{subdesc[2]}</div>
       </div>
+      {btnFnc ? <button>{btnFnc[0]}</button> : ''}
     </div>
   );
 }
